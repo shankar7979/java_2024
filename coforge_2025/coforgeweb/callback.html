@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var addition = function (a, b) {
+            return a + b;
+        }
+
+        var welcome = function (user) {
+            return "welcome user " + user;
+        }
+
+        main=function(addition, callback) {
+            console.log("addition is " + addition);
+            console.log("welcome will be called back  later "+callback);
+        }
+        main1=function(wel, callback) {
+            console.log("first welcome called  " + wel);
+            console.log("addition  will be called back  later "+callback);
+        }
+
+        main(addition(11, 22), welcome("hari kumar"));
+        console.log("-------------------")
+        main1( welcome("hari kumar"),addition(11, 22));
+
+        
+
+    </script>
+
+</body>
+
+</html>

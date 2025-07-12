@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        function getUserName() {
+            var nm = document.getElementById("name").value
+            if (nm == "") {
+                //alert("name is blank")
+                document.getElementById("name_err").innerHTML="<span style='color:red'>name is  blank</span>"
+            }
+            else {
+                alert("name is " + nm)
+            }
+        }
+    </script>
+
+    <div>
+        <label>Enter Name </label>
+        <input id="name">
+        <span id="name_err"></span>
+    </div>
+
+    <div>
+        <button type="button" onclick="getUserName()"> getName</button>
+    </div>
+
+</body>
+
+</html>

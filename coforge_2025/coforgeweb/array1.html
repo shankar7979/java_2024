@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+   var ar1=[11,22,33,1,2,3,4]
+   var ar2=[1,2,30,1,2,3,4,1,2]
+
+   var ar3=ar1.concat(ar2);
+    console.log(ar1)
+    console.log(ar2)
+    console.log(ar3)
+
+    console.log("using pop "+ar1.pop()) // pop remove and return last element 
+    console.log(ar1)
+
+    ar1.push(88888); // push add element at last position 
+    
+    // shift   -- remove and return from first position
+    console.log("using shift "+ar1.shift())
+    console.log("after shift "+ar1.shift())
+
+    // unshift -- add element at first position 
+     ar1.unshift()
+
+     console.log("after unshift "+ar1)
+     ar1.reverse()
+     console.log("after reverse "+ar1)
+     ar1.splice(2,2); //remove 2 element from 2nd position
+     console.log("after splice "+ar1)
+     
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        var employee = {
+            id: 9988998,
+            name: 'suresh kumar',
+            salary: 20000
+        }
+        console.log(employee)
+        console.log(employee.id + ", " + employee.name + ", " + employee.salary)
+
+        var customers = [
+            {
+                id: 9988991,
+                name: 'jayant kumar',
+                salary: 10000
+            },
+            {
+                id: 9988992,
+                name: 'ram kumar',
+                salary: 25000
+            },
+            {
+                id: 9988993,
+                name: 'kamal kumar',
+                salary: 20000
+            },
+            {
+                id: 9988994,
+                name: 'vimal kumar',
+                salary:  26000
+            },
+            {
+                id: 9988995,
+                name: 'suman kumar',
+                salary: 20000
+            }
+        ]
+        console.log(customers)
+        for (const c of customers) {
+          console.log(c)
+        }
+        console.log("id   name    salary")
+        for (const c of customers) {
+          console.log(c.id+", "+c.name+", "+c.salary)
+        }
+        var show_customers=function(){
+            document.getElementById("id1").innerHTML=JSON.stringify(customers)
+        }
+        var show_employee=function(){
+         //     document.getElementById("id1").innerHTML=JSON.stringify(employee)
+        document.getElementById("id1").innerHTML=`<style>table,th,td{border:solid}</style><table><tr><th>id</th><th>name
+            </th><th>salary</th></tr><tr><td>${employee.id}</td><td>${employee.name}</td><td>${employee.salary}</td></tr></table>`
+        }
+
+    </script>
+    <div id="id1">
+    </div>
+    <div>
+       <button onclick="show_customers()">show customers</button>
+       <button onclick="show_employee()">show employee</button>
+    </div>
+
+
+</body>
+
+</html>
