@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="script/script1.js">
+	
+</script>
+<style>
+@import url("style/style.css");
+</style>
+
+</head>
+<body onload="myclock();time()">
+	<!-- <form action="userAction" method="get"> -->
+
+<div style="float:right;color:blue;" id="clock">
+</div>
+
+<div style="float:left;color:blue;" id="time">
+</div>
+
+
+	<form action="userAction" method="post" onsubmit="return validate()">
+
+		<div>
+			<label>Enter id </label> <input name="id" id="id">
+			<span id="id_err"></span>
+		</div>
+
+		<div>
+			<label>Enter Name </label> <input name="name" id="name">
+				<span id="name_err"></span>
+		</div>
+
+		<div>
+			<label>Enter Password </label> <input name="pass" type="password"
+				id="pass">
+					<span id="pass_err"></span>
+		</div>
+
+		<div>
+			<input type="submit"> <input type="reset">
+		</div>
+
+	</form>
+</body>
+</html>
