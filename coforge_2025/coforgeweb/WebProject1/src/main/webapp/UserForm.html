@@ -15,30 +15,32 @@
 <body onload="myclock();time()">
 	<!-- <form action="userAction" method="get"> -->
 
-<div style="float:right;color:blue;" id="clock">
-</div>
-
-<div style="float:left;color:blue;" id="time">
-</div>
-
+	<div style="margin-bottom:150pt ">
+		<span style="float: right; color: yellow;" id="clock"> </span> <span
+			style="float: left; color: yellow;" id="time"> </span>
+	</div>
 
 	<form action="userAction" method="post" onsubmit="return validate()">
 
 		<div>
-			<label>Enter id </label> <input name="id" id="id">
-			<span id="id_err"></span>
+			<label>Enter id </label> <input name="id" id="id"> <span
+				id="id_err"></span>
 		</div>
 
 		<div>
-			<label>Enter Name </label> <input name="name" id="name">
-				<span id="name_err"></span>
+			<label>Enter Name </label> <input name="name" id="name"> <span
+				id="name_err"></span>
+		</div>
+		
+		<div>
+			<label>Enter Salary </label> <input name="salary" >
 		</div>
 
 		<div>
 			<label>Enter Password </label> <input name="pass" type="password"
-				id="pass">
-					<span id="pass_err"></span>
+				id="pass"> <span id="pass_err"></span>
 		</div>
+		
 
 		<div>
 			<input type="submit"> <input type="reset">
