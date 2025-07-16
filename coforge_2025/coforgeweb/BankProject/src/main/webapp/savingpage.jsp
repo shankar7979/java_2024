@@ -30,6 +30,5 @@
     Name  :<jsp:getProperty  name="login" property="name" />
     <br>
     
-
 </body>
 </html>
