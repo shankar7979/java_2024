@@ -26,11 +26,15 @@ public class BankController extends HttpServlet {
 		request.setAttribute("login", login);
 
 		var btype = request.getParameter("btype");
+		response.setContentType("text/html");
+		
+		response.getWriter().print("<h2> Controller page</h2>");
 
 		RequestDispatcher dispatcher;
 		if (btype.equals("saving")) {
           dispatcher=request.getRequestDispatcher("savingpage.jsp");
-          dispatcher.forward(request, response);
+//          dispatcher.forward(request, response);
+          dispatcher.include(request, response);
 		}
 		
 		if (btype.equals("current")) {

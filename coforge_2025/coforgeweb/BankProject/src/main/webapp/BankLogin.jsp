@@ -40,7 +40,7 @@
 			</div>
 			<div style="margin-top: 5pt">
 			   <button type="submit"> Login</button>
-			   <button type="cancel"> Cancel</button>
+			   <button type="reset"> Cancel</button>
 			</div>
 		</div>
 	</form>
