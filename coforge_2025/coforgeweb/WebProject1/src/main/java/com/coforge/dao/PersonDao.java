@@ -1,7 +1,6 @@
 package com.coforge.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.coforge.model.Person;
+import com.coforge.util.DatabaseUtil;
 
 public class PersonDao {
 
@@ -21,9 +21,11 @@ public class PersonDao {
 	Connection connection;
 
 	public PersonDao() throws SQLException {
-		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-		
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/coforge_db", "root", "mysql");
+//		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+//		
+//		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/coforge_db", "root", "mysql");
+		 connection=DatabaseUtil.getMyConnection();
+
 	}
 
 	public boolean addPerson(Person p) throws SQLException {
