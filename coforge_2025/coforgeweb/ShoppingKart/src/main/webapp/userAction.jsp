@@ -16,6 +16,7 @@ form{
 </style>
 </head>
 <body>
+<%@page errorPage="error.jsp" %>
 	<%
 	int id = Integer.parseInt(request.getParameter("id"));
 	String name = request.getParameter("name");

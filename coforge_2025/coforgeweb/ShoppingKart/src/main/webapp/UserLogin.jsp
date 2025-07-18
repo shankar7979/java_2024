@@ -15,7 +15,6 @@ form{
 </style>
 </head>
 <body>
-
 	<form action="userAction.jsp">
 		<div>
 			<label>Enter Id</label> 

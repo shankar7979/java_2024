@@ -32,6 +32,9 @@ form {
 	Object name=session.getAttribute("name");
 	String prd1 = request.getParameter("prd1");
 	String prd2 = request.getParameter("prd2");
+	
+	 session.setAttribute("prd1", prd1);
+	 session.setAttribute("prd2", prd2);
 	%>
 
 	<form action="delievery.jsp">
