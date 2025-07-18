@@ -1,0 +1,28 @@
+form{
+	border:solid cyan;
+	margin-top: 100pt;
+	margin-left: 300pt;
+	background-color:wheat;
+	width:40%;
+	padding:20pt;
+}
+
+label{
+	width: 120pt;
+	float:left;
+}
+input{
+	width:100pt
+}
+
+input[type='submit']{
+	margin-top: 5pt;
+	margin-right:20pt;
+}
+body{
+	background-color: red;
+}
+span{
+	color:red;
+	font-weight: bold;
+}

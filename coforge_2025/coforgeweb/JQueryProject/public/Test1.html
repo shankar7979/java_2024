@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script  src="https://code.jquery.com/jquery-3.7.1.min.js">
+</script>
+<script>
+
+$(document).ready(function(){
+	alert("hello to jquery")
+})
+
+$(function(){
+	alert($("#id1").html())  // html()  -- innerHTML () of javascript
+	$("#id1").html("<h1>We are learning Jquery</h1");
+	
+	$('#id1').click(function(){
+		$("#id1").html("<h1>we will learn hibernate after this </h1");
+	})
+})
+
+</script>
+</head>
+<body>
+
+<div id="id1">
+       Welcome to jquery 
+</div>
+
+</body>
+</html>
