@@ -14,7 +14,7 @@
 	border: inset 20pt;
 	margin-top: 100pt;
 	margin-left: 300pt;
-	width: 30%;
+	width: 50%;
 }
 
 body {
@@ -28,11 +28,33 @@ body {
 
 <script>
  $(()=>{
-	alert("calculator program")
+	//alert("calculator program")
 	
 	$('#addition').click(()=>{
-		if($('#n1').val()==''){
-			alert("no1 is blank")
+		var n1=$('#n1').val();
+		var n2=$('#n2').val();
+		
+		if(n1==''){
+			//alert("no1 is blank")
+//			$('#n1_err').html('no1 is blank')
+			$('#n1_err').css('background-color','yellow').html('no1 is blank')
+		}
+		else if(isNaN(n1)){
+			//alert("no1 must be  number")
+			$('#n1_err').css('background-color','yellow').html('no1 must be  number')
+		}
+		
+		else if(n2==''){
+			//alert("no2 is blank")
+			$('#n2_err').css('background-color','yellow').html('no2 is blank')
+		}
+		else if(isNaN(n2)){
+//			alert("no2 must be  number")
+			$('#n2_err').css('background-color','yellow').html('no2 is blank')
+		}
+		else {
+			var n3=parseFloat(n1)+parseFloat(n2);
+			$('#result').html("addition is "+n3)
 		}
 	})
  })
@@ -41,17 +63,19 @@ body {
 	<div class="calcform">
 		<div>
 			<label>Enter No1</label> <input id="n1">
+			<span id="n1_err"></span>
 		</div>
 
 		<div>
 			<label>Enter No2</label> <input id="n2">
+			<span id="n2_err"></span>
 		</div>
-
-		<div>
-			<label>Result is <span id="result"> </span>
+         
+		<div style="margin-top: 5pt; margin-bottom: 5pt;">
+			<label>Result is <span id="result" style="color:blue"> </span>
 			</label>
 		</div>
-		<br>
+		<br><br><br>
 		<div>
 			<div>
 				<button type="button" id="addition">addition</button>
