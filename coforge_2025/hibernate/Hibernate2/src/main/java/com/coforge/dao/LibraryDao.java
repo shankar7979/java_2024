@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class LibraryDao {
@@ -70,7 +69,8 @@ public class LibraryDao {
         if (library1 != null) {
             transaction = session.getTransaction();
             transaction.begin();
-            session.update(library1);
+            //session.update(library);
+            session.merge(library);
             transaction.commit();
             return true;
         }
