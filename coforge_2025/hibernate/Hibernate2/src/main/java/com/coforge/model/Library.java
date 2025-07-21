@@ -1,5 +1,6 @@
 package com.coforge.model;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @Entity
+@EqualsAndHashCode
 public class Library {
     @Id
     private int libraryId;
