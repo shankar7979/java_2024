@@ -1,4 +1,4 @@
-package com.coforge.model.com.coforge.util.com.coforge.dao;
+package com.coforge.dao;
 
 import com.coforge.model.Library;
 import com.coforge.model.com.coforge.util.HibernateUtil;

@@ -1,4 +1,4 @@
-package com.coforge.model.com.coforge.util.com.coforge.dao;
+package com.coforge.main;
 
 public class LibraryMain {
     public static void main(String[] args) {

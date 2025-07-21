@@ -1,4 +1,4 @@
-package com.coforge.model.com.coforge.util;
+package com.coforge.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
