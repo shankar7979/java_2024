@@ -1,5 +1,6 @@
 package com.coforge.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@Builder
 public class Product {
 
     @Id
@@ -16,7 +18,7 @@ public class Product {
     private  String  prdName;
     private LocalDate mfd;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "prdSet")
     private Set<User> userSet;
 
 }

@@ -10,9 +10,10 @@
         <property name="hibernate.connection.password">mysql</property>
         <property name="hibernate.connection.pool_size">100</property>
         <property name="hibernate.show_sql">true</property>
-<!--        <property name="hibernate.hbm2ddl.auto">create</property>-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <mapping class="com.coforge.model.User" />
         <mapping class="com.coforge.model.Account" />
+        <mapping class="com.coforge.model.Product" />
     </session-factory>
 </hibernate-configuration>
