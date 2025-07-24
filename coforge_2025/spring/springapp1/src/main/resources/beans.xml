@@ -5,7 +5,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hello1" class="com.coforge.Hello">
-
     </bean>
 
     <bean id="employee" class="com.coforge.model.Employee" scope="singleton" init-method="init" destroy-method="cleanup">
@@ -13,5 +12,14 @@
         <property name="name" value="manoj kumar"></property>
         <property name="salary" value="100001"></property>
     </bean>
+
+    <bean id="rect1" class="com.coforge.model.Rectangle">
+        <constructor-arg name="length" value="20"></constructor-arg>
+        <constructor-arg name="width" value="10"></constructor-arg>
+    </bean>
+    <bean id="square1" class="com.coforge.model.Square">
+        <constructor-arg name="side" value="15"></constructor-arg>
+    </bean>
+
 
 </beans>
