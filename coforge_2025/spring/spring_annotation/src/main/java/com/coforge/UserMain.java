@@ -12,7 +12,7 @@ public class UserMain {
           ConfigurableApplicationContext
                 context=new AnnotationConfigApplicationContext(UserConfiguration.class);
 
-      User user=  context.getBean(User.class);
+        User user=  context.getBean(User.class);
         System.out.println(user);
 
         User user1=  context.getBean("userBean",User.class);
@@ -23,7 +23,6 @@ public class UserMain {
 
         System.out.println(user);
         System.out.println(user1);
-
 
   context.close();
     }
