@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-       label{
-        float:left;
-         width:100pt;
-       }
-       input{
-       width:100pt;
-       margin-top:5pt;
-       }
-       form{
+       .myclass{
          border:solid;
          background:lightyellow;
          color:maroon;
@@ -28,21 +20,19 @@
     </style>
 </head>
 <body>
-
-<form action="empAction">
-<h1>Emp Form</h1>
-  <div>
-   <label>Enter Id </label>
-   <input name="empId">
+<%@page import="com.coforge.model.Employee"%>
+<%
+Employee employee=(Employee)request.getAttribute("employee");
+%>
+  <div class="myclass">
+      <div> Id is <%=employee.getEmpId()%></div>
+      <div> Name is <%=employee.getEmpName()%></div>
   </div>
-  <div>
-   <label>Enter Name </label>
-   <input name="empName">
+  <hr>
+  <div class="myclass">
+  <p>Using EL (Expression Language)</p>
+     Id id ${employee.empId}<p>
+     Name id ${employee.empName}<p>
   </div>
-  <div>
-    <button type="submit">login</button>
-    <button type="reset">reset</button>
-  </div>
-</form>
 </body>
 </html>
