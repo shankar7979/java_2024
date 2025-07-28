@@ -5,9 +5,12 @@ import com.coforge.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -30,4 +33,8 @@ public class UserController {
      }
     }
 
+    @ModelAttribute("hobbies")
+    public List<String> myHobby(){
+        return Arrays.asList(new String[]{"music","movie","carrom","touring"});
+    }
 }

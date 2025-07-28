@@ -1,242 +1,112 @@
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.zip
+
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+spring 
+pom.xml 
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.3.21</version>
+    </dependency>
+      <artifactId>spring-context</artifactId>
+  </dependencies>
+beans.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- bean definitions here -->
+</beans>                         
+-----------------------------------------------------------------
 https://github.com/shankar7979/java_2024/blob/master/m2.zip
-pom.xml
+https://github.com/shankar7979/java_2024/blob/master/m2%20spring-hibernate.zip
+
+pom.xml   -- hibernate 
 <dependencies>
-
  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-
  <dependency>
-
   <groupId>org.projectlombok</groupId>
-
   <artifactId>lombok</artifactId>
-
   <version>1.18.32</version>
-
   <scope>provided</scope>
-
  </dependency>
  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-
- <dependency>
-
   <groupId>mysql</groupId>
-
   <artifactId>mysql-connector-java</artifactId>
-
   <version>8.0.32</version>
-
- </dependency>
-
-
-
  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-
- <dependency>
-
   <groupId>org.hibernate</groupId>
-
   <artifactId>hibernate-core</artifactId>
-
   <version>5.6.15.Final</version>
-
- </dependency>
-
-
-
  <!--
-
  https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-
- <dependency>
-
-  <groupId>org.hibernate</groupId>
-
   <artifactId>hibernate-entitymanager</artifactId>
-
   <version>5.3.7.Final</version>
-
- </dependency>
-
  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-
- <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-
- <dependency>
-
  <groupId>org.junit.jupiter</groupId>
-
  <artifactId>junit-jupiter-api</artifactId>
-
  <version>5.13.3</version>
-
  <scope>test</scope>
-
- </dependency>
-
- <dependency>
-
   <groupId>org.junit.jupiter</groupId>
-
   <artifactId>junit-jupiter-engine</artifactId>
-
   <version>5.13.3</version>
-
   <scope>test</scope>
-
- </dependency>
-
  <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
-
- <dependency>
-
  <groupId>com.h2database</groupId>
-
  <artifactId>h2</artifactId>
-
  <version>2.3.232</version>
-
- <scope>test</scope>
-
- </dependency>
-
-
-
 </dependencies>
-
-
-
 hibermate.cfg.xml
-
-
-
-<?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE hibernate-configuration PUBLIC
-
     "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-
     "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
 <hibernate-configuration>
-
   <session-factory>
-
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db4</property>
-
     <property name="hibernate.connection.username">root</property>
-
     <property name="hibernate.connection.password">mysql</property>
-
     <property name="hibernate.connection.pool_size">100</property>
-
     <property name="hibernate.show_sql">true</property>
-
     <property name="hibernate.hbm2ddl.auto">update</property>
-
      
-
     <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-
     <mapping class="com.coforge.model.Employee" />
-
   </session-factory>
-
 </hibernate-configuration>
-
 ==========================================================================================================================================
-
 #Git link 
-
-https://github.com/shankar7979/java_2024/tree/master/coforge_2025
-
+https://github.com/shankar7979/java_2024/tree/master/coforge_2025aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaar
 #VS CODE
-
 https://vscode.download.prss.microsoft.com/dbazure/download/stable/2901c5ac6db8a986a5666c3af51ff804d05af0d4/VSCode-win32-x64-1.101.2.zip
-
 #Eclipse
-
 https://mirror.kakao.com/eclipse/technology/epp/downloads/release/2025-06/R/eclipse-java-2025-06-R-win32-x86_64.zip
-
 https://mirror.kakao.com/eclipse/technology/epp/downloads/release/2025-06/R/eclipse-jee-2025-06-R-win32-x86_64.zip
-
 #Apache Tomcat
-
 https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.43/bin/apache-tomcat-10.1.43-windows-x64.zip   
-
 #IntelliJ IDEA
 https://www.jetbrains.com/idea/download/download-thanks.html?platform=windowsZip&code=IIC
-
-open jdk 17
-
 https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_windows-x64_bin.zip
-
-
-#JDK 24 
+#JDK
 https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.zip
-
 ==============================MySql =======================================
-
 https://dev.mysql.com/downloads/file/?id=531676
-
 extract it
-
 goto mysql\binhttps://writexo.com/coforge_2025
-
 mysqld --initialize --console
-
 mysqld --console
-
 mysql -u root -p
-
 Enter the temporary password from point 3. The root is default MySQL user name. Then type:
-
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysql'
-
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysql';
 ============================================================================
-
 #MY SQL Connector
-
-
-
 https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar
-
 ---------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 java interview questions
-
-
-
 https://github.com/aatul/Java-Interview-Questions-Answers
-
 https://github.com/sudheerj/java-interview-questions
-
 https://github.com/Devinterview-io/java-interview-questions
-
 https://github.com/in28minutes/JavaInterviewQuestionsAndAnswers
-
+==========================================================
