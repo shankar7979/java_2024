@@ -4,6 +4,8 @@ import com.coforge.exception.EmployeeException;
 import com.coforge.model.Employee;
 import com.coforge.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,21 +17,39 @@ public class EmployeeController {
     @Autowired
     private EmployeeService service;
 
+//    @GetMapping("/employee")
+//    public List<Employee> getAllEmployee() {
+//        try {
+//            return  service.getAllEmployee();
+//        } catch (EmployeeException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
     @GetMapping("/employee")
-    public List<Employee> getAllEmployee() {
+    public ResponseEntity<List<Employee>> getAllEmployee() {
         try {
-            return  service.getAllEmployee();
+            return    new ResponseEntity<>(service.getAllEmployee(), HttpStatus.FOUND);
         } catch (EmployeeException e) {
-            throw new RuntimeException(e);
+            return   new  ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
 
     @PostMapping("/employee")
-    public Employee addEmployee(@RequestBody  Employee emp) {
+    public ResponseEntity<Employee> addEmployee(@RequestBody  Employee emp) {
         try {
-            return service.addEmployee(emp);
+            return new ResponseEntity<>(service.addEmployee(emp),HttpStatus.FOUND);
         } catch (EmployeeException e) {
-            throw new RuntimeException(e);
+            return  new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
         }
      }
+
+//    @PostMapping("/employee")
+//    public Employee addEmployee(@RequestBody  Employee emp) {
+//        try {
+//            return service.addEmployee(emp);
+//        } catch (EmployeeException e) {
+//            throw new RuntimeException(e);
+//        }
+//     }
     }

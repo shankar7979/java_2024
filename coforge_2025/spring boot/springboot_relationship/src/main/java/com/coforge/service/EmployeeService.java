@@ -16,12 +16,8 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee emp) throws EmployeeException {
         System.out.println(emp+" employee ");
-//        if(repository.findById(emp.getId()).isEmpty()){
-//            throw  new EmployeeException("employee object with given id already present ");
-//        }
-//        else {
+
          return    repository.save(emp);
-        //}
     }
 
     public List<Employee> getAllEmployee() throws EmployeeException {
