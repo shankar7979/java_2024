@@ -29,20 +29,48 @@ public class EmployeeController {
     @GetMapping("/employee")
     public ResponseEntity<List<Employee>> getAllEmployee() {
         try {
-            return    new ResponseEntity<>(service.getAllEmployee(), HttpStatus.FOUND);
+            return new ResponseEntity<>(service.getAllEmployee(), HttpStatus.FOUND);
         } catch (EmployeeException e) {
-            return   new  ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
-    @PostMapping("/employee")
-    public ResponseEntity<Employee> addEmployee(@RequestBody  Employee emp) {
+    @GetMapping("/employee/{id}")
+    public ResponseEntity<Employee> searchEmployeeByid(@PathVariable int id){
         try {
-            return new ResponseEntity<>(service.addEmployee(emp),HttpStatus.FOUND);
+            return new ResponseEntity<>(service.searchEmployeeByid(id), HttpStatus.FOUND);
         } catch (EmployeeException e) {
-            return  new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
-     }
+    }
+
+    @PutMapping("/employee")
+    public ResponseEntity<Employee> updateEmployee(@RequestBody Employee emp) {
+        try {
+            return new ResponseEntity<>(service.updateEmployee(emp), HttpStatus.FOUND);
+        } catch (EmployeeException e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/employee/{id}")
+    public ResponseEntity<Employee> removeEmployeeById(@PathVariable int id) {
+        try {
+            return new ResponseEntity<>(service.removeEmployeeById(id), HttpStatus.FOUND);
+        } catch (EmployeeException e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+    @PostMapping("/employee")
+    public ResponseEntity<Employee> addEmployee(@RequestBody Employee emp) {
+        try {
+            return new ResponseEntity<>(service.addEmployee(emp), HttpStatus.FOUND);
+        } catch (EmployeeException e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
 
 //    @PostMapping("/employee")
 //    public Employee addEmployee(@RequestBody  Employee emp) {
@@ -52,4 +80,4 @@ public class EmployeeController {
 //            throw new RuntimeException(e);
 //        }
 //     }
-    }
+}
