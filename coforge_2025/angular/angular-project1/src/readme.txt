@@ -6,3 +6,9 @@ to generate component
 to start build and serve 
    ng serve
 
+   two way binding 
+
+      ng g c  calculator
+
+
+

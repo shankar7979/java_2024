@@ -11,6 +11,14 @@ import Employee from './model/employee';
 export class EmployeeComponent {
     emp:Employee;
     emp1:Employee[];
+    src1:string="assets/emp.jpg";
+    width1:number=200;
+    height1:number=150;
+
+    hello(){
+      alert("hello called ")
+    }
+
 
      constructor(){
       this.emp=new Employee();
