@@ -1,0 +1,46 @@
+<div class="container">
+    <form class="bg-info text-primary border p-5 m-5">
+       <div class="form-group">
+              <label>Enter Id</label>
+              <input class="form-control" type="number" required min="1000"  max="90000"
+              [(ngModel)]="emp.id" name="id" #id="ngModel"
+              >
+              <span *ngIf="id.touched && id.errors?.['required']" class="text-warning">
+                     id is blank
+              </span>
+              <span *ngIf="id.touched && id.errors?.['min']" class="text-warning">
+                     id must be minimum  1000
+              </span>
+              
+              <span *ngIf="id.touched && id.errors?.['max']" class="text-warning">
+                     id must be maximum  90000
+              </span>
+
+       </div>
+       
+       <div class="form-group">
+              <label>Enter Name</label>
+              <input class="form-control"[(ngModel)]="emp.name" name="name" #name="ngModel"
+               required minlength="5" maxlength="15"
+              >
+              <span *ngIf="name.touched && name.errors?.['required']" class="text-warning">
+                     name is blank
+              </span>
+              
+              <span *ngIf="name.touched && name.errors?.['minlength']" class="text-warning">
+                     name must of minimum 5 characters 
+              </span>
+              
+              <span *ngIf="name.touched && name.errors?.['maxlength']" class="text-warning">
+                     name must of maximum 15 characters 
+              </span>
+       </div>
+       <div class="form-group">
+              <label>Enter Dob</label>
+              <input class="form-control" type="date">
+       </div>
+
+
+    </form>
+
+</div>

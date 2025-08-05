@@ -16,6 +16,7 @@ export class CalculatorComponent {
 @Input()  n2:number;
 @Input()  n3:number;
 
+dob:Date=new Date('1990-12-23'); 
 customer1:Customermodel[];
 
   constructor(){

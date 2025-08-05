@@ -3,4 +3,5 @@ export class Customermodel{
     public name:string="";
     public salary:number=0;
 
+    
 }
