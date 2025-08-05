@@ -1,0 +1,19 @@
+<div class="container border w-50 p-5 m-5 bg-info">
+
+    <h1>all employee</h1> 
+    <table class="table table-stripped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Dob</th>
+        </tr>
+        <tr *ngFor="let e of emplist|async">
+           <td>{{e.id}}</td>
+           <td>{{e.name}}</td>
+           <td>{{e.dob}}</td>
+        </tr>
+
+    </table>
+
+     
+</div>

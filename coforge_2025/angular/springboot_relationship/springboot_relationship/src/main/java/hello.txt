@@ -1,0 +1,16 @@
+ {
+    "name":"amit kumar",
+    "dob":"2001-12-20",
+    "car":{
+      "cost":200000,
+      "type":"thar"
+    },
+    "addressSet":[
+          {"city":"noida", "state":"up"},
+          {"city":"shimla", "state":"hp"},
+          {"city":"bhopal", "state":"mp"}
+    ]
+}
+
+
+ResponseEntity = ResponseBody + status
