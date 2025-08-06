@@ -1,13 +1,12 @@
 <div class="container">
-   
-    <div style="float:right; background-color:black;color:white;padding: 10pt;border-radius: 10pt;
-    margin-bottom: 40pt; " >
-        {{myclock}}
-</div>
 
-    <form class="bg-info text-primary border p-5 m-5">
-        
-        <div class="form-group">
+    <div style="float:right; background-color:black;color:white;padding: 10pt;border-radius: 10pt;
+    margin-bottom: 40pt; ">
+        {{myclock}}
+    </div>
+    <form class="bg-info text-primary border p-5 m-5" (ngSubmit)="submit()">
+
+        <!-- <div class="form-group">
             <label>Enter Id</label>
             <input class="form-control" type="number" required min="1000" max="90000" [(ngModel)]="emp.id" name="id"
                 #id="ngModel">
@@ -22,7 +21,7 @@
                 id must be maximum 90000
             </span>
 
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label>Enter Name</label>
@@ -54,7 +53,16 @@
                 style="margin-left:2pt">Cancel</button>
         </div>
 
-
+        <div>
+            <button (click)="navigateToALLEmployee()"  class="btn btn-secondary mt-2"> all employee</button>
+        </div>
+        
+    <div [hidden]="!visible">
+        {{msg}}
+        Added
+        {{emp1.name}} {{emp1.dob}}
+    </div>
+   
     </form>
 
 </div>
