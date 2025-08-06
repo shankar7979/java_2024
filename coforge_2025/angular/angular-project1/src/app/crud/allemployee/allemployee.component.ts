@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../service/employee.service';
 import { catchError, Observable } from 'rxjs';
-import { Employee } from '../employee/model/employee';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Employee } from './model/employee';
 
 @Component({
   selector: 'app-allemployee',
