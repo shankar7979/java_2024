@@ -2,6 +2,7 @@
 
 import { Component } from "react";
 import Address from "./address";
+import Counter from "./Counter";
 
 class Employee extends Component {
     constructor() {
@@ -26,6 +27,7 @@ class Employee extends Component {
                         </div>
                     </div>
                     <Address></Address>
+                    <Counter></Counter>
                 </div>
             </>
         )
